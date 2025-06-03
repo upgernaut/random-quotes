@@ -463,12 +463,10 @@ class RandomQuotesPlugin {
         }
         
         $html = '<div class="' . esc_attr($css_class) . '">';
-        $html .= '<blockquote>';
-        $html .= '<p>' . esc_html($quote_data['content']) . '</p>';
+        $html .= '<p style="font-size: 18px; font-weight: bold;">' . esc_html($quote_data['content']) . '</p>';
         if ($show_author && !empty($quote_data['author'])) {
-            $html .= '<cite>— ' . esc_html($quote_data['author']) . '</cite>';
+            $html .= '<cite style="font-size: 18px; font-weight: bold;">— ' . esc_html($quote_data['author']) . '</cite>';
         }
-        $html .= '</blockquote>';
         $html .= '</div>';
         
         return $html;
